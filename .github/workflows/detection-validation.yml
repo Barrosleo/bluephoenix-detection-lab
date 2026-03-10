@@ -1,0 +1,21 @@
+name: Detection Validation
+
+on:
+  pull_request:
+  push:
+    paths:
+      - "detections/**/*.yaml"
+
+jobs:
+  validate-detections:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate YAML syntax
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y yamllint
+          yamllint detections/
