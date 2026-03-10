@@ -1,0 +1,32 @@
+[
+  {
+    "platform": "windows",
+    "log_source": "Security",
+    "event_id": 4625,
+    "timestamp": "2026-03-10T20:10:01Z",
+    "target_user": "testuser",
+    "logon_type": 3,
+    "source_ip": "192.168.56.1",
+    "status": "0xC000006D",
+    "sub_status": "0xC000006A"
+  },
+  {
+    "platform": "windows",
+    "log_source": "Security",
+    "event_id": 4625,
+    "timestamp": "2026-03-10T20:11:12Z",
+    "target_user": "testuser",
+    "logon_type": 3,
+    "source_ip": "192.168.56.1",
+    "status": "0xC000006D",
+    "sub_status": "0xC000006A"
+  },
+  {
+    "platform": "linux",
+    "log_source": "auth.log",
+    "timestamp": "2026-03-10T20:12:05Z",
+    "host": "ubuntu-lab",
+    "service": "sshd",
+    "message": "Failed password for testuser from 192.168.56.1 port 53422 ssh2"
+  }
+]
