@@ -1,0 +1,7 @@
+{
+  "EventID": 1,
+  "ProcessName": "powershell.exe",
+  "CommandLine": "powershell.exe -EncodedCommand SQBFAFgA",
+  "ParentProcess": "winword.exe",
+  "User": "testuser"
+}
