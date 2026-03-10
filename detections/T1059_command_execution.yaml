@@ -1,0 +1,32 @@
+id: BP-T1059-001
+name: Suspicious Command Execution via PowerShell
+technique:
+  id: T1059
+  name: Command and Scripting Interpreter
+description: >
+  Detects suspicious PowerShell execution patterns indicative of
+  attacker‑driven command execution, including encoded commands
+  and execution from non‑standard parent processes.
+
+log_sources:
+  - Windows Security Event Log
+  - Sysmon Event ID 1
+
+detection_logic: |
+  ProcessName == "powershell.exe"
+  AND (
+    CommandLine CONTAINS "-EncodedCommand"
+    OR ParentProcess NOT IN ["explorer.exe", "services.exe"]
+  )
+
+false_positives:
+  - Administrative scripts
+  - Legitimate automation tasks
+
+severity: High
+
+response:
+  - Review executed command
+  - Validate user context
+  - Inspect parent process
+  - Consider endpoint isolation if malicious
