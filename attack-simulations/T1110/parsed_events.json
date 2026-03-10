@@ -1,0 +1,14 @@
+{
+  "technique": "T1110",
+  "signal": "Repeated authentication failures within a short time window",
+  "entities": {
+    "target_user": "testuser",
+    "source_ip": "192.168.56.1"
+  },
+  "aggregation": {
+    "window_minutes": 5,
+    "failed_attempts_threshold": 5
+  },
+  "risk": "Medium",
+  "confidence": "Moderate"
+}
