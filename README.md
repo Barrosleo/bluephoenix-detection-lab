@@ -16,11 +16,9 @@ No cloud services or paid tooling are required. GitHub acts as the control plane
 ```
 bluephoenix-detection-lab/
 ├── README.md
-│
 ├── detections/
 │   ├── T1059_command_execution.yaml
 │   └── T1110_bruteforce.yaml
-│
 ├── attack-simulations/
 │   ├── T1059/
 │   │   ├── attack_steps.md
@@ -30,14 +28,12 @@ bluephoenix-detection-lab/
 │       ├── attack_steps.md
 │       ├── raw_logs.json
 │       └── parsed_events.json
-│
 ├── automation/
 │   └── response_decision_tree.md
-│
 ├── docs/
 │   ├── architecture.md
-│   └── detection-coverage.md
-│
+│   ├── detection-coverage.md
+│   └── telemetry-sources.md
 └── LICENSE
 ```
 
