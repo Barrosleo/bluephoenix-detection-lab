@@ -1,0 +1,6 @@
+{
+  "technique": "T1059",
+  "signal": "Encoded PowerShell execution",
+  "risk": "High",
+  "confidence": "Strong"
+}
