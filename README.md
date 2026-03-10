@@ -34,6 +34,9 @@ bluephoenix-detection-lab/
 │   ├── architecture.md
 │   ├── detection-coverage.md
 │   └── telemetry-sources.md
+├──.github/
+│   └── workflows/
+│       └── detection-validation.yml
 └── LICENSE
 ```
 
