@@ -1,0 +1,28 @@
+id: BP-T1110-001
+name: Multiple Failed Authentication Attempts
+technique:
+  id: T1110
+  name: Brute Force
+description: >
+  Detects repeated failed authentication attempts against a single
+  account or host within a short time window.
+
+log_sources:
+  - Windows Security Event Log
+  - Linux auth.log
+
+detection_logic: |
+  FailedLogonCount >= 5
+  WITHIN 5 minutes
+  FROM same source
+
+false_positives:
+  - User password mistakes
+  - Misconfigured services
+
+severity: Medium
+
+response:
+  - Lock account if threshold exceeded
+  - Investigate source IP
+  - Reset credentials if compromise suspected
